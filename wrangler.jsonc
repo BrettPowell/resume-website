@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "resume-website",
+  "compatibility_date": "2026-09-01",
+  // Static site only: no Worker script, Cloudflare serves ./public directly.
+  "assets": {
+    "directory": "./public",
+    // Serve /Management for Management.html, matching the canonical URLs.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
