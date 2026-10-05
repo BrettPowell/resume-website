@@ -2,6 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "resume-website",
   "compatibility_date": "2026-09-01",
+  // Attach the apex domain on deploy. The bretteepowell.com zone must be in this
+  // Cloudflare account; Cloudflare creates the DNS record and certificate.
+  "routes": [
+    { "pattern": "bretteepowell.com", "custom_domain": true }
+  ],
   // Static site only: no Worker script, Cloudflare serves ./public directly.
   "assets": {
     "directory": "./public",

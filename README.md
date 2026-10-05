@@ -25,10 +25,6 @@ Or from a terminal with Node.js installed:
 npx wrangler deploy
 ```
 
-## Before going live
+## Domain
 
-The canonical URLs, share tags (`og:url`, `og:image`), `robots.txt` and `sitemap.xml` use `https://resume-website.pages.dev`. Replace it with the real domain once it is known:
-
-```bash
-grep -rl 'resume-website.pages.dev' public | xargs sed -i '' 's#https://resume-website.pages.dev#https://YOUR-DOMAIN#g'
-```
+The site is served at https://bretteepowell.com. `wrangler.jsonc` attaches it as a Workers custom domain on deploy, which requires the `bretteepowell.com` zone to be in the same Cloudflare account. Canonical links, share tags (`og:url`, `og:image`), `robots.txt` and `sitemap.xml` all use this domain.

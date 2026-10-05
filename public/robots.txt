@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://resume-website.pages.dev/sitemap.xml
+Sitemap: https://bretteepowell.com/sitemap.xml
